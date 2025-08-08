@@ -21,7 +21,25 @@ public class Duel
     }
     public void Start()
     {   
-        PrepareDuel();
+        // PrepareDuel();
+        StartDuel();
+    }
+    
+    private void ShowStatus()
+    {
+        TimeSpan remaining = Duration - _stopwatch.Elapsed;
+        if (remaining.TotalSeconds < 0) remaining = TimeSpan.Zero;
+
+        Console.WriteLine($"\n⏳ Remaining time: {remaining.Minutes:D2}:{remaining.Seconds:D2}\n");
+    }
+
+    private void PrepareDuel()
+    {
+        AiDuelSubject.CreateSubject(_config);
+    }
+
+    private void StartDuel()
+    {
         Console.WriteLine(_config.getDuelTime());
         AiDuelConstants.DuelConst(_config.getDuelTime());
         _stopwatch.Start();
@@ -62,18 +80,5 @@ public class Duel
         }
 
         _stopwatch.Stop();
-    }
-    
-    private void ShowStatus()
-    {
-        TimeSpan remaining = Duration - _stopwatch.Elapsed;
-        if (remaining.TotalSeconds < 0) remaining = TimeSpan.Zero;
-
-        Console.WriteLine($"\n⏳ Remaining time: {remaining.Minutes:D2}:{remaining.Seconds:D2}\n");
-    }
-
-    private void PrepareDuel()
-    {
-        AiDuelSubject.CreateSubject(_config);
     }
 }

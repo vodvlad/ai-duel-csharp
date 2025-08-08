@@ -17,12 +17,21 @@ public class AiDuelConfig
 {
     private Difficulty _difficulty;
     private ProgrammingLanguage _language;
-    private string lmUrl = "https://api.openai.com/v1/chat/completions";
-    private string model = "gpt-3.5-turbo";
+    private const string _lmUrl = "http://localhost:1234/v1/chat/completions";
+    private const string _model = "qwen/qwen3-8b";
     public AiDuelConfig()
     {
         _difficulty = Difficulty.Easy;
         _language = ProgrammingLanguage.Clang;
+    }
+
+    public string getLmUrl()
+    {
+        return _lmUrl;
+    }
+    public string getModel()
+    {
+        return _model;
     }
     public ProgrammingLanguage getProgrammingLanguage()
     {
