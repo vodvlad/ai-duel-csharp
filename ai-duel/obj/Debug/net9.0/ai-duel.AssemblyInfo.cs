@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ai-duel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+289ffbd10190b9d7aa4ade8c771217ffb2a0f1a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ai-duel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ai-duel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
